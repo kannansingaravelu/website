@@ -1,3 +1,3 @@
-# Say Hello.
+# Kannan Singaravelu
 
-Reach out for advanced training and consulting services in Machine Learning and Generative AI.
+Machine Learning & GenAI Strategist | Crafting Next-Gen Financial Solutions
