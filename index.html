@@ -146,23 +146,9 @@
 							<p>For expert training and consulting in Machine Learning and Generative AI, don’t hesitate to contact me.</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
+									<form action="/send-email" method="POST">
 										<ul class="actions">
-											<li><a href="mailto:kannansingaravelu@gmail.com" class="button submit">Send Message</a></li>
+											<li><a href="mailto:kannansingaravelu@gmail.com?subject=Inquiry%20from%20Website&body=Hello%2C%0A%0AI%20am%20contacting%20you%20regarding%20..." class="button">Send Email</a></li>
 										</ul>
 									</form>
 								</section>
