@@ -1,0 +1,10 @@
+timeseries 
+===========
+
+Module contents
+---------------
+
+.. automodule:: timeseries
+   :members:
+   :undoc-members:
+   :show-inheritance:
