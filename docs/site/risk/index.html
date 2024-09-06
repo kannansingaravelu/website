@@ -504,9 +504,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#risk.Historical" class="md-nav__link">
+  <a href="#risk.ConditionalVaR" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Historical
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ConditionalVaR
     </span>
   </a>
   
@@ -518,6 +518,54 @@
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;RiskInputs
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk.ValueAtRisk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ValueAtRisk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk.VarBacktester" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;VarBacktester
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" VarBacktester">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk.VarBacktester-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk.VarBacktester.perform_backtest" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;perform_backtest
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -872,8 +920,8 @@
 
 
 
-<h3 id="risk.Historical" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">Historical</span>
+<h3 id="risk.ConditionalVaR" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ConditionalVaR</span>
 
 
 </h3>
@@ -882,7 +930,7 @@
     <div class="doc doc-contents ">
 
 
-      <p>Class to calculate Value at Risk (VaR) and Conditional Value at Risk (CVaR) based on historical returns and confidence level</p>
+      <p>Class to calculate Conditional Value at Risk (CVaR) aka Expected Shortfall (ES) based on historical returns and confidence level</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -899,7 +947,7 @@
           <tr class="doc-section-item">
             <td><code>inputs</code></td>
             <td>
-                  <code><span title="riskinputs.RiskInputs">RiskInputs</span></code>
+                  <code><a class="autorefs autorefs-internal" title="risk.riskinputs.RiskInputs" href="#risk.RiskInputs">RiskInputs</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -925,24 +973,13 @@
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code><span title="risk.Historical.historicalVaR">historicalVaR</span></code></td>
+            <td><code><span title="risk.ConditionalVaR.CVaR">CVaR</span></code></td>
             <td>
                   <code>float</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The calculated historical Value at Risk (VaR)</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="risk.Historical.historicalCVaR">historicalCVaR</span></code></td>
-            <td>
-                  <code>float</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The calculated historical Conditional Value at Risk (CVaR)</p>
+                <p>The calculated Conditional Value at Risk (CVaR)</p>
               </div>
             </td>
           </tr>
@@ -1089,6 +1126,270 @@
 
 
 
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="risk.ValueAtRisk" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ValueAtRisk</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Class to calculate Value at Risk (VaR) based on returns and confidence level</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>inputs</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="risk.riskinputs.RiskInputs" href="#risk.RiskInputs">RiskInputs</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An instance of Risk inputs containing returns and confidence level</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>method</code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[&#39;historical&#39;, &#39;parametric&#39;, &#39;montecarlo&#39;]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The method to calculate VaR, by default 'historical'</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="risk.ValueAtRisk.var">var</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The calculated Value at Risk (VaR)</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="risk.VarBacktester" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">VarBacktester</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Class to perform a backtest for Value at Risk (VaR) calculations with non-overlapping windows  </p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>inputs</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="risk.riskinputs.RiskInputs" href="#risk.RiskInputs">RiskInputs</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An instance of Risk inputs containing returns and confidence level</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>window_volatility</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The window size for the rolling volatility calculation, by default 21</p>
+              </div>
+            </td>
+            <td>
+                  <code>21</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>window_forward</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The window size for the rolling forward calculation, by default 10</p>
+              </div>
+            </td>
+            <td>
+                  <code>10</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A tabular output containing the results of the backtest</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<h4 id="risk.VarBacktester-functions">Functions</h4>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="risk.VarBacktester.perform_backtest" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">perform_backtest</span>
+
+
+</h5>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">perform_backtest</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Perform VaR backtest with non-overlapping windows</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A tabular output containing the results of the backtest</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
 
 
 
