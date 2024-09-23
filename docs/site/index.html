@@ -323,6 +323,23 @@
   
   
   
+    <li class="md-tabs__item">
+      <a href="datasets/" class="md-tabs__link">
+        
+  
+    
+  
+  Datasets
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
     
       <li class="md-tabs__item">
@@ -614,6 +631,26 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
       
@@ -633,10 +670,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -647,8 +684,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             User Guide
           </label>
@@ -706,10 +743,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
         
           
-          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -720,8 +757,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -863,11 +900,11 @@
 
 
 <h1 id="welcome">Welcome!</h1>
-<p><code>quantmod-python</code> package is inspired by the quantmod package for R. This new tool is designed to assist quantitative traders and data analysts with the development, testing, and rapid prototyping of trading strategies. quantmod features a straightforward and intuitive interface aimed at simplifying workflows and boosting productivity.</p>
+<p><code>quantmod</code> package is inspired by the quantmod package for R. This new tool is designed to assist quantitative traders and data analysts with the development, testing, and rapid prototyping of trading strategies. quantmod features a straightforward and intuitive interface aimed at simplifying workflows and boosting productivity.</p>
 <p>The package is developed and maintained by <a href="https://kannansingaravelu.com">Kannan Singaravelu</a>.</p>
 <h2 id="user-installation">User installation</h2>
 <p>The easiest way to install quantmod is using pip:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>quantmod-python
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>quantmod
 </span></code></pre></div>
 <h2 id="modules">Modules</h2>
 <ul>
@@ -877,6 +914,7 @@
 <li><a href="timeseries/">timeseries</a>  </li>
 <li><a href="indicators/">indicators</a></li>
 <li><a href="derivatives/">derivatives</a></li>
+<li><a href="datasets/">datasets</a></li>
 </ul>
 <h2 id="quickstart">Quickstart</h2>
 <p><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Retrieves market data &amp; ticker object </span>
@@ -893,6 +931,9 @@
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># Derivatives functions</span>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="kn">from</span> <span class="nn">quantmod.derivatives</span> <span class="kn">import</span> <span class="n">maxpain</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># Datasets functions</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="kn">from</span> <span class="nn">quantmod.datasets</span> <span class="kn">import</span> <span class="n">fetch_historical_data</span>
 </span></code></pre></div>
 <br>
 Note: quantmod is currently under active development, and anticipate ongoing enhancements and additions. The aim is to continually improve the package and expand its capabilities to meet the evolving needs of the community.</p>
