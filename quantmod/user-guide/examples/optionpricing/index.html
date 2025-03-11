@@ -12,7 +12,7 @@
         <link rel="prev" href="../../installation/">
       
       
-        <link rel="next" href="../optionchain/">
+        <link rel="next" href="../nseoption/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -727,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../optionchain/" class="md-nav__link">
+      <a href="../nseoption/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -918,19 +918,20 @@
 </span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="n">binomial</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">()</span>
 </span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>
 </span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="c1"># 3. Monte Carlo Option Pricing</span>
-</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="c1"># Initialize the MC Option Pricing Engine</span>
-</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="n">mcoption</span> <span class="o">=</span> <span class="n">MonteCarloOptionPricing</span><span class="p">(</span>
-</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>        <span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span>
-</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>        <span class="n">initialspot</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>        <span class="n">nsims</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span>
-</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>        <span class="n">timestep</span><span class="o">=</span><span class="mi">252</span><span class="p">,</span>
-</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>        <span class="n">barrier</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
-</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>        <span class="n">rebate</span><span class="o">=</span><span class="mi">10</span>
-</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    <span class="p">)</span>
-</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>
-</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vanilla Option: CallPrice &gt; </span><span class="si">{</span><span class="n">mcoption</span><span class="o">.</span><span class="n">call_vanilla</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">, PutPrice &gt; </span><span class="si">{</span><span class="n">mcoption</span><span class="o">.</span><span class="n">put_vanilla</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Asian Option: CallPrice &gt; </span><span class="si">{</span><span class="n">mcoption</span><span class="o">.</span><span class="n">call_asian</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">, PutPrice &gt; </span><span class="si">{</span><span class="n">mcoption</span><span class="o">.</span><span class="n">put_asian</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Up and out Option: CallPrice &gt; </span><span class="si">{</span><span class="n">mcoption</span><span class="o">.</span><span class="n">upandoutcall</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="c1"># Instantiate the MonteCarloPricing class</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="n">mc</span> <span class="o">=</span> <span class="n">MonteCarloOptionPricing</span><span class="p">(</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    <span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    <span class="n">nsims</span><span class="o">=</span><span class="mi">50000</span><span class="p">,</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    <span class="n">timestep</span><span class="o">=</span><span class="mi">252</span><span class="p">,</span>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    <span class="n">option_type</span><span class="o">=</span><span class="n">OptionType</span><span class="o">.</span><span class="n">CALL</span><span class="p">,</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    <span class="n">exercise_style</span><span class="o">=</span><span class="n">ExerciseStyle</span><span class="o">.</span><span class="n">EUROPEAN</span><span class="p">,</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    <span class="n">barrier_level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    <span class="n">barrier_rebate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    <span class="n">barrier_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="p">)</span>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Monte Carlo price for </span><span class="si">{</span><span class="n">mc</span><span class="o">.</span><span class="n">exercise_style</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">mc</span><span class="o">.</span><span class="n">option_type</span><span class="si">}</span><span class="s2"> option:&quot;</span><span class="p">)</span>
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Option Price: </span><span class="si">{</span><span class="n">mc</span><span class="o">.</span><span class="n">option_price</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 
 
@@ -980,7 +981,7 @@
         
         
           
-          <a href="../optionchain/" class="md-footer__link md-footer__link--next" aria-label="Next: Option Chain">
+          <a href="../nseoption/" class="md-footer__link md-footer__link--next" aria-label="Next: Option Chain">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next

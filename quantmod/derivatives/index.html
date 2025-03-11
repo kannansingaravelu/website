@@ -589,17 +589,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#derivatives.OptionChain" class="md-nav__link">
+  <a href="#derivatives.OptionData" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;OptionChain
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;OptionData
     </span>
   </a>
   
-    <nav class="md-nav" aria-label=" OptionChain">
+    <nav class="md-nav" aria-label=" OptionData">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#derivatives.OptionChain-functions" class="md-nav__link">
+  <a href="#derivatives.OptionData-functions" class="md-nav__link">
     <span class="md-ellipsis">
       Functions
     </span>
@@ -609,27 +609,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#derivatives.OptionChain.get_option_price" class="md-nav__link">
+  <a href="#derivatives.OptionData.get_option_quote" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_option_price
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_option_quote
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#derivatives.OptionChain.get_synthetic_futures" class="md-nav__link">
+  <a href="#derivatives.OptionData.get_synthetic_future_price" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_synthetic_futures
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#derivatives.OptionChain.plot_pain_analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;plot_pain_analysis
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_synthetic_future_price
     </span>
   </a>
   
@@ -767,6 +758,8 @@
       
         
       
+        
+      
     
     
       
@@ -813,6 +806,28 @@
   
   <span class="md-ellipsis">
     Option Pricing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/examples/nseoption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Option Chain
     
   </span>
   
@@ -971,8 +986,8 @@
 
 
 
-<h3 id="derivatives.OptionChain" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">OptionChain</span>
+<h3 id="derivatives.OptionData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">OptionData</span>
 
 
 </h3>
@@ -981,7 +996,7 @@
     <div class="doc doc-contents ">
 
 
-        <p>A class to fetch and process option chain data from NSE (National Stock Exchange).</p>
+        <p>A class to fetch and analyze option chain data from NSE.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1004,7 +1019,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Trading symbol (e.g., 'NIFTY', 'BANKNIFTY' or any equity symbol)</p>
+                <p>Trading symbol of the stock/index (e.g., 'NIFTY', 'RELIANCE')</p>
               </div>
             </td>
             <td>
@@ -1013,14 +1028,15 @@
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>expiry_date</code>
+                <code>expiry_dt</code>
             </td>
             <td>
                   <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Expiry date of the options</p>
+                <p>Expiry date in format '%d-%b-%Y' (e.g., '27-Mar-2025')
+Note: Month should be first 3 letters capitalized (Jan, Feb, Mar, etc.)</p>
               </div>
             </td>
             <td>
@@ -1042,46 +1058,46 @@
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code><span title="derivatives.OptionChain.option_chain">option_chain</span></code></td>
+            <td><code><span title="derivatives.OptionData.get_put_call_ratio">get_put_call_ratio</span></code></td>
             <td>
-                  <code><span title="pandas.DataFrame">DataFrame</span></code>
+                  <code><span title="float">float</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Processed option chain data</p>
+                <p>Put-Call ratio based on open interest</p>
               </div>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="derivatives.OptionChain.call_option_data">call_option_data</span></code></td>
-            <td>
-                  <code><span title="pandas.DataFrame">DataFrame</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Call options data</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="derivatives.OptionChain.put_option_date">put_option_date</span></code></td>
-            <td>
-                  <code><span title="pandas.DataFrame">DataFrame</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Put options data</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="derivatives.OptionChain.option_pain">option_pain</span></code></td>
+            <td><code><span title="derivatives.OptionData.get_maximum_pain_strike">get_maximum_pain_strike</span></code></td>
             <td>
                   <code><span title="float">float</span></code>
             </td>
             <td>
               <div class="doc-md-description">
                 <p>Maximum pain strike price</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="derivatives.OptionData.get_call_option_data">get_call_option_data</span></code></td>
+            <td>
+                  <code><span title="pandas.DataFrame">DataFrame</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Call option chain data</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="derivatives.OptionData.get_put_option_data">get_put_option_data</span></code></td>
+            <td>
+                  <code><span title="pandas.DataFrame">DataFrame</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Put option chain data</p>
               </div>
             </td>
           </tr>
@@ -1099,18 +1115,18 @@
       </thead>
       <tbody>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="derivatives.OptionChain.get_option_price" href="#derivatives.OptionChain.get_option_price">get_option_price</a></code></td>
+              <td><code><span title="derivatives.OptionData.get_option_quote : float">get_option_quote : float</span></code></td>
               <td>
                 <div class="doc-md-description">
-                  <p>Get the option price (last traded, bid, or ask) for a specific option</p>
+                  <p>Get option quote for specific strike price, option type and transaction intent</p>
                 </div>
               </td>
             </tr>
             <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="derivatives.OptionChain.get_synthetic_futures" href="#derivatives.OptionChain.get_synthetic_futures">get_synthetic_futures</a></code></td>
+              <td><code><span title="derivatives.OptionData.get_synthetic_future_price : float">get_synthetic_future_price : float</span></code></td>
               <td>
                 <div class="doc-md-description">
-                  <p>Calculate synthetic futures price for a given strike price</p>
+                  <p>Calculate synthetic futures price using put-call parity</p>
                 </div>
               </td>
             </tr>
@@ -1133,22 +1149,22 @@
 
 
 
-<h4 id="derivatives.OptionChain-functions">Functions</h4>
+<h4 id="derivatives.OptionData-functions">Functions</h4>
 
 <div class="doc doc-object doc-function">
 
 
-<h5 id="derivatives.OptionChain.get_option_price" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_option_price</span>
+<h5 id="derivatives.OptionData.get_option_quote" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_option_quote</span>
 
 
 </h5>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_option_price</span><span class="p">(</span><span class="n">strike</span><span class="p">,</span> <span class="n">opt_type</span><span class="p">,</span> <span class="n">txn_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_option_quote</span><span class="p">(</span><span class="n">strikePrice</span><span class="p">,</span> <span class="n">optionType</span><span class="p">,</span> <span class="n">intent</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Get the option price (last traded, bid, or ask) for a specific option.</p>
+        <p>Get option quote for specific strike price and option type.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1164,7 +1180,7 @@
       <tbody>
           <tr class="doc-section-item">
             <td>
-                <code>strike</code>
+                <code>strikePrice</code>
             </td>
             <td>
                   <code><span title="float">float</span></code>
@@ -1180,14 +1196,14 @@
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>opt_type</code>
+                <code>optionType</code>
             </td>
             <td>
                   <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Option type ('CE' for Call or 'PE' for Put)</p>
+                <p>Type of option, either 'CE' (Call) or 'PE' (Put)</p>
               </div>
             </td>
             <td>
@@ -1196,18 +1212,21 @@
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>txn_type</code>
+                <code>intent</code>
             </td>
             <td>
                   <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Transaction type ('buy', 'sell', or None for last price)</p>
+                <p>Quote type:
+- '' (default) for last traded price
+- 'sell' for bid price
+- 'buy' for ask price</p>
               </div>
             </td>
             <td>
-                  <code>None</code>
+                  <code>&#39;&#39;</code>
             </td>
           </tr>
       </tbody>
@@ -1229,7 +1248,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Option price based on the specified parameters</p>
+                <p>Option price based on the specified intent</p>
               </div>
             </td>
           </tr>
@@ -1243,18 +1262,17 @@
 <div class="doc doc-object doc-function">
 
 
-<h5 id="derivatives.OptionChain.get_synthetic_futures" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_synthetic_futures</span>
+<h5 id="derivatives.OptionData.get_synthetic_future_price" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_synthetic_future_price</span>
 
 
 </h5>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_synthetic_futures</span><span class="p">(</span><span class="n">strike</span><span class="p">)</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_synthetic_future_price</span><span class="p">(</span><span class="n">strike</span><span class="p">)</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Calculate synthetic futures price for a given strike price.
-Synthetic Futures price = Strike + Call - Put</p>
+        <p>Calculate synthetic futures price using put-call parity.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1277,7 +1295,7 @@ Synthetic Futures price = Strike + Call - Put</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Strike price for which to calculate synthetic futures</p>
+                <p>Strike price to use for calculation</p>
               </div>
             </td>
             <td>
@@ -1309,25 +1327,6 @@ Synthetic Futures price = Strike + Call - Put</p>
           </tr>
       </tbody>
     </table>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h5 id="derivatives.OptionChain.plot_pain_analysis" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">plot_pain_analysis</span>
-
-
-</h5>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">plot_pain_analysis</span><span class="p">()</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Plot pain analysis for the option chain.</p>
 
     </div>
 

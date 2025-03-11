@@ -776,6 +776,8 @@
       
         
       
+        
+      
     
     
       
@@ -822,6 +824,28 @@
   
   <span class="md-ellipsis">
     Option Pricing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/examples/nseoption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Option Chain
     
   </span>
   
@@ -1437,7 +1461,7 @@ and vega and rho are expressed per 1% change in their respective parameters.</p>
     <div class="doc doc-contents ">
 
 
-        <p>Class for Monte Carlo Option Pricing</p>
+        <p>Monte Carlo Pricing for options.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1460,21 +1484,7 @@ and vega and rho are expressed per 1% change in their respective parameters.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Object containing the following option parameters:
-spot : float
-    Current price of the underlying asset
-strike : float
-    Strike price of the option
-rate : float
-    Risk-free interest rate (as a decimal)
-ttm : float
-    Time to maturity in years
-volatility : float
-    Implied volatility of the underlying asset (as a decimal)
-- callprice : float, optional
-    Market price of call option (used for implied volatility calculation)
-- putprice : float, optional
-    Market price of put option (used for implied volatility calculation)</p>
+                <p>The inputs for the option pricing model.</p>
               </div>
             </td>
             <td>
@@ -1506,11 +1516,11 @@ volatility : float
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Time step (default is Field(252, gt=0)).</p>
+                <p>Time step (default is Field(..., gt=0)).</p>
               </div>
             </td>
             <td>
-                  <code>252</code>
+                  <code><span title="pydantic.Field">Field</span>(..., gt=0, description=&#39;Time step&#39;)</code>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -1518,7 +1528,7 @@ volatility : float
                 <code>option_type</code>
             </td>
             <td>
-                  <code><span title="models.binomial.OptionType">OptionType</span></code>
+                  <code><span title="models.montecarlo.OptionType">OptionType</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1526,23 +1536,23 @@ volatility : float
               </div>
             </td>
             <td>
-                <em>required</em>
+                  <code><span title="pydantic.Field">Field</span>(..., description=&#39;Call or Put&#39;)</code>
             </td>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>option_style</code>
+                <code>exercise_style</code>
             </td>
             <td>
-                  <code><span title="OptionStyle">OptionStyle</span></code>
+                  <code><span title="models.montecarlo.ExerciseStyle">ExerciseStyle</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Style of option (American, European, or Barrier).</p>
+                <p>Style of exercise (American, European, or Barrier).</p>
               </div>
             </td>
             <td>
-                <em>required</em>
+                  <code><span title="pydantic.Field">Field</span>(..., description=&#39;American or European or Barrier&#39;)</code>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -1558,7 +1568,7 @@ volatility : float
               </div>
             </td>
             <td>
-                <em>required</em>
+                  <code><span title="pydantic.Field">Field</span>(None, gt=0, description=&#39;Barrier level (for barrier options)&#39;)</code>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -1574,7 +1584,7 @@ volatility : float
               </div>
             </td>
             <td>
-                <em>required</em>
+                  <code><span title="pydantic.Field">Field</span>(None, gt=0, description=&#39;Barrier rebate (for barrier options)&#39;)</code>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -1582,39 +1592,62 @@ volatility : float
                 <code>barrier_type</code>
             </td>
             <td>
-                  <code><span title="BarrierType">BarrierType</span></code>
+                  <code><span title="models.montecarlo.BarrierType">BarrierType</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Type of barrier option.</p>
+                <p>Type of barrier option (default is None).</p>
               </div>
             </td>
             <td>
-                <em>required</em>
+                  <code><span title="pydantic.Field">Field</span>(None, description=&#39;Type of barrier option&#39;)</code>
             </td>
           </tr>
       </tbody>
     </table>
 
 
-    <p><span class="doc-section-title">Returns:</span></p>
+<p><span class="doc-section-title">Attributes:</span></p>
     <table>
       <thead>
         <tr>
-<th>Name</th>          <th>Type</th>
+          <th>Name</th>
+          <th>Type</th>
           <th>Description</th>
         </tr>
       </thead>
       <tbody>
           <tr class="doc-section-item">
-<td><code>attributes</code></td>            <td>
+            <td><code><span title="models.MonteCarloOptionPricing.option_price">option_price</span></code></td>
+            <td>
                   <code><span title="float">float</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>call_vanilla, put_vanilla</p>
-<p>call_asian, put_asian</p>
-<p>upandoutcall</p>
+                <p>The calculated option price.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ValueError">ValueError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If an unsupported exercise style or barrier type is provided.</p>
               </div>
             </td>
           </tr>
