@@ -984,6 +984,7 @@
 <li><code>treemap</code></li>
 <li><code>overlay</code></li>
 <li><code>normalized</code></li>
+<li><code>surface</code></li>
 </ul>
 </li>
 </ul>
@@ -1051,6 +1052,9 @@
 </span><span id="__span-2-62"><a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>
 </span><span id="__span-2-63"><a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a><span class="c1"># Treemap</span>
 </span><span id="__span-2-64"><a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a><span class="n">stats</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;treemap&quot;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">stats</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">stats</span><span class="p">),</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;AnnRet&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Treemap of Annualised Returns&quot;</span><span class="p">)</span>
+</span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>
+</span><span id="__span-2-66"><a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a><span class="c1"># Surface plot</span>
+</span><span id="__span-2-67"><a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">fdm_grid</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;surface&quot;</span><span class="p">,</span> <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Maturity&#39;</span><span class="p">,</span> <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Spot&#39;</span><span class="p">,</span> <span class="n">zaxis_title</span><span class="o">=</span><span class="s2">&quot;Option Value&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;FDM Option Value Surface&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 
 
