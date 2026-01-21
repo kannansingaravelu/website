@@ -256,6 +256,23 @@
   
   
     <li class="md-tabs__item">
+      <a href="db/" class="md-tabs__link">
+        
+  
+    
+  
+  Database
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="derivatives/" class="md-tabs__link">
         
   
@@ -582,6 +599,27 @@
   
   
     <li class="md-nav__item">
+      <a href="db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="derivatives/" class="md-nav__link">
         
   
@@ -726,10 +764,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -741,8 +779,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             User Guide
           </label>
@@ -795,6 +833,8 @@
       
         
       
+        
+      
     
     
       
@@ -807,10 +847,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
         
           
-          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -822,8 +862,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -885,6 +925,28 @@
   
   <span class="md-ellipsis">
     Data Retrieval
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-guide/examples/database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
     
   </span>
   
@@ -1037,7 +1099,9 @@
 
 
 <h1 id="welcome">Welcome!</h1>
-<p>The quantmod package is inspired by the popular R package of the same name but reimagined for the modern Python data stack. It’s designed to support data scientists, analysts, and AI researchers with tools for fast, flexible data exploration and visualization. Whether you're working with time series, building machine learning pipelines, or prototyping data-driven ideas, quantmod offers a clean, intuitive interface that helps you move quickly from data to insight.</p>
+<p>quantmod is inspired by the popular R package of the same name, reimagined for the modern Python data stack.</p>
+<p>It provides a lightweight, structured toolkit for financial time-series ingestion, storage, and analysis, designed for data scientists, analysts, and AI practitioners.</p>
+<p>quantmod emphasizes ease of use, reproducibility, and rapid experimentation, making it well-suited for exploratory research, machine-learning pipelines, and data-driven prototyping. Its clean, Pythonic interface helps users move quickly from raw market data to structured analysis and insight.</p>
 <p><a href="https://pepy.tech/projects/quantmod"><img alt="PyPI Downloads" src="https://static.pepy.tech/badge/quantmod" /></a></p>
 <h2 id="user-installation">User installation</h2>
 <p>The easiest way to install quantmod is using pip:</p>
@@ -1046,6 +1110,7 @@
 <h2 id="modules">Modules</h2>
 <ul>
 <li><a href="charts/">charts</a></li>
+<li><a href="db/">database</a></li>
 <li><a href="datasets/">datasets</a></li>
 <li><a href="derivatives/">derivatives</a></li>
 <li><a href="indicators/">indicators</a></li>
@@ -1058,23 +1123,26 @@
 <p><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Retrieves market data &amp; ticker object </span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.markets</span><span class="w"> </span><span class="kn">import</span> <span class="n">getData</span><span class="p">,</span> <span class="n">getTicker</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Charting module</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">quantmod.charts</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Database module</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.db</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantmodDB</span>   
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Option price</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">OptionInputs</span><span class="p">,</span> <span class="n">BlackScholesOptionPricing</span><span class="p">,</span> <span class="n">MonteCarloOptionPricing</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Charting module</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">quantmod.charts</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Calculates price return of different time period.</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.timeseries</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Option price</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">OptionInputs</span><span class="p">,</span> <span class="n">BlackScholesOptionPricing</span><span class="p">,</span> <span class="n">MonteCarloOptionPricing</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># Technical indicators</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.indicators</span><span class="w"> </span><span class="kn">import</span> <span class="n">ATR</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># Calculates price return of different time period.</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.timeseries</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># Derivatives functions</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.derivatives</span><span class="w"> </span><span class="kn">import</span> <span class="n">maxpain</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># Technical indicators</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.indicators</span><span class="w"> </span><span class="kn">import</span> <span class="n">ATR</span>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1"># Datasets functions</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_historical_data</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1"># Derivatives functions</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.derivatives</span><span class="w"> </span><span class="kn">import</span> <span class="n">maxpain</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="c1"># Datasets functions</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantmod.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_historical_data</span>
 </span></code></pre></div>
 <br>
 Note: quantmod is currently under active development, and anticipate ongoing enhancements and additions. The aim is to continually improve the package and expand its capabilities to meet the evolving needs of the community.</p>

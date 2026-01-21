@@ -256,6 +256,23 @@
   
   
     <li class="md-tabs__item">
+      <a href="../db/" class="md-tabs__link">
+        
+  
+    
+  
+  Database
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../derivatives/" class="md-tabs__link">
         
   
@@ -464,6 +481,27 @@
   
   <span class="md-ellipsis">
     Datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
     
   </span>
   
@@ -973,10 +1011,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -988,8 +1026,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             User Guide
           </label>
@@ -1042,6 +1080,8 @@
       
         
       
+        
+      
     
     
       
@@ -1054,10 +1094,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
         
           
-          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1069,8 +1109,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -1132,6 +1172,28 @@
   
   <span class="md-ellipsis">
     Data Retrieval
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/examples/database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database
     
   </span>
   
@@ -1564,12 +1626,12 @@
 
 
 </h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">allReturn</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">allReturn</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Calculates annual returns for the specified inputs.</p>
+        <p>Returns a snapshot of latest log returns across multiple horizons.</p>
 
     </div>
 
@@ -1588,7 +1650,7 @@
 
     <div class="doc doc-contents ">
 
-        <p>Calculates annual returns for the specified inputs.</p>
+        <p>Calculates annual log returns.</p>
 
     </div>
 
@@ -1822,7 +1884,7 @@ MDD = (Peak Value - Lowest Value) - Peak Value
 
     <div class="doc doc-contents ">
 
-        <p>Calculates daily returns for the specified inputs.</p>
+        <p>Calculates daily log returns.</p>
 
     </div>
 
@@ -2019,7 +2081,7 @@ MDD = (Peak Value - Lowest Value) / Peak Value
 
     <div class="doc doc-contents ">
 
-        <p>Calculates monthly returns for the specified inputs.</p>
+        <p>Calculates monthly log returns.</p>
 
     </div>
 
@@ -2038,7 +2100,8 @@ MDD = (Peak Value - Lowest Value) / Peak Value
 
     <div class="doc doc-contents ">
 
-        <p>Calculates periodic returns for the specified inputs</p>
+        <p>Calculates periodic log returns. 
+Updated for 2026 pandas frequency aliases (ME, QE, YE).</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2078,7 +2141,7 @@ MDD = (Peak Value - Lowest Value) / Peak Value
             <td>
               <div class="doc-md-description">
                 <p>None, defaults to daily frequency
-Sepcifiy W, M, Q and Y for weekly, monthly, quarterly and annual frequency</p>
+Specify W, M, Q, or A for weekly, monthly, quarterly, and annual frequency</p>
               </div>
             </td>
             <td>
@@ -2100,11 +2163,31 @@ Sepcifiy W, M, Q and Y for weekly, monthly, quarterly and annual frequency</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="pandas.Series">Series</span></code>
+                  <code><span title="pandas.Series">Series</span> or <span title="pandas.DataFrame">DataFrame</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>resampled dataframe series of log returns</p>
+                
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code>Log returns at the specified frequency. If period=&#34;all&#34;,</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code>returns a single-row DataFrame summarizing multiple horizons.</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                
               </div>
             </td>
           </tr>
@@ -2128,7 +2211,7 @@ Sepcifiy W, M, Q and Y for weekly, monthly, quarterly and annual frequency</p>
 
     <div class="doc doc-contents ">
 
-        <p>Calculates quarterly returns for the specified inputs.</p>
+        <p>Calculates quarterly log returns.</p>
 
     </div>
 
@@ -2416,7 +2499,7 @@ c) 12 to annualize monthly volatility
 
     <div class="doc doc-contents ">
 
-        <p>Calculates weekly returns for the specified inputs.</p>
+        <p>Calculates weekly log returns.</p>
 
     </div>
 
