@@ -1,235 +1,319 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Kannan Singaravelu</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="/images/ks_logo_favicon.png" />
-		
-		<!-- <link rel="icon" <img src="images/ks_logo_favicon_2.png" /> -->
-		<!-- <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> -->
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Kannan Singaravelu — AI for Finance</title>
+	<meta name="description" content="Kannan Singaravelu works at the intersection of markets and machine intelligence — ex-Bloomberg, celebrated CQF instructor, creator of the quantmod Python library, and builder of OpenArrow, an AI-native structured products platform." />
+	<link rel="canonical" href="https://kannansingaravelu.com/" />
+	<meta name="author" content="Kannan Singaravelu" />
+	<meta name="theme-color" content="#000000" />
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-<!-- 							<li><a href="copilot.html">DocuBotX</a></li> -->
-							<li><a href="quantmod/index.html">quantmod</a></li>
-							<li><a href="testimonials.html">Hype Central</a></li>
-							<li><a href="#two">What I do</a></li>
-							<li><a href="#one">Who am I</a></li>
-							<li><a href="#three">Contact</a></li>
-						</ul>
-					</nav>
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://kannansingaravelu.com/" />
+	<meta property="og:title" content="Kannan Singaravelu — AI for Finance" />
+	<meta property="og:description" content="Two decades of markets. One focus: AI. Ex-Bloomberg, CQF instructor, creator of quantmod, building OpenArrow." />
+	<meta property="og:site_name" content="Kannan Singaravelu" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@kannansi" />
+	<meta name="twitter:creator" content="@kannansi" />
+	<meta name="twitter:title" content="Kannan Singaravelu — AI for Finance" />
+	<meta name="twitter:description" content="Two decades of markets. One focus: AI. Ex-Bloomberg, CQF instructor, creator of quantmod, building OpenArrow." />
+
+	<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+	<link rel="stylesheet" href="/assets/css/site.css" />
+
+	<!-- Structured data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Kannan Singaravelu",
+		"url": "https://kannansingaravelu.com/",
+		"jobTitle": "Machine Learning & GenAI Strategist",
+		"worksFor": { "@type": "Organization", "name": "OpenArrow AI", "url": "https://openarrow.ai" },
+		"alumniOf": [
+			{ "@type": "Organization", "name": "WorldQuant University" }
+		],
+		"hasCredential": [
+			{ "@type": "EducationalOccupationalCredential", "name": "Certificate in Quantitative Finance (CQF)" }
+		],
+		"knowsAbout": ["Quantitative Finance", "Machine Learning", "Generative AI", "Derivatives", "Python", "Large Language Models"],
+		"email": "mailto:kannansingaravelu@gmail.com",
+		"sameAs": [
+			"https://www.linkedin.com/in/kannansi",
+			"https://x.com/kannansi",
+			"https://github.com/kannansingaravelu",
+			"https://kannansi.substack.com",
+			"https://www.youtube.com/kannansingaravelu",
+			"https://docs.kannansingaravelu.com"
+		]
+	}
+	</script>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<nav class="nav" aria-label="Primary">
+			<a class="brand" href="#top">Kannan Singaravelu</a>
+			<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+			<ul class="nav-links">
+				<li><a href="#openarrow">OpenArrow</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#quantmod">quantmod</a></li>
+				<li><a href="#speaking">Speaking</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#words">Testimonials</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main">
+		<!-- Hero — white -->
+		<section class="tile" id="top">
+			<div class="tile-inner centered">
+				<span class="eyebrow">AI for Finance</span>
+				<h1 class="hero-display">Kannan Singaravelu.</h1>
+				<p class="lead">Two decades of markets.<br />One focus: machine intelligence.</p>
+				<div class="actions">
+					<a class="btn btn-primary" href="#openarrow">See the work</a>
+					<a class="btn btn-secondary" href="#contact">Get in touch</a>
 				</div>
-			</section>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Kannan Singaravelu</h1>
-							<p>Machine Learning & GenAI Strategist | Crafting Next-Gen Financial Solutions</p> 
-							<!-- <a href="http://html5up.net">HTML5 UP</a><br />
-							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>. -->
-							<ul class="actions">
-<!-- 								<li><a href="https://copilot.kannansingaravelu.com/" class="button scrolly">Try  AI Copilot</a></li> -->
-								<li><a href="testimonials.html" class="button">Testimonials</a></li>
-							</ul>
-						</div>
-					</section>
-
-					<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a> -->
-							<div class="content">
-								<div class="inner">
-									<h2>About</h2>
-									<p>With over 20 years of experience in financial markets and data analysis, Kannan is a seasoned practitioner whose expertise spans multiple asset classes and is underpinned by a strong foundation in data science.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Career Canvas</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<!-- <section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Consultant @ Fitch Learning</h2>
-									<p>Strengthened the integration of Machine Learning in Finance and Python applications, significantly enriching the Fitch (CQF) program's offerings. Created and led 10 specialized bootcamps over four years, setting an unmatched record in the program's history.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section> -->
-						<!-- <section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Application Specialist @ Bloomberg</h2>
-									<p>Collaborated with global sales, product development, and engineering teams, focusing on equity derivatives, data science, and quant research platforms. Spearheaded key initiatives including CAT-III AIF, BQUANT, BQL, and BLAN.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section> -->
-						<section>
-							<!-- <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a> -->
-							<div class="content">
-								<div class="inner">
-									<h2><a target="new" href="https://pypi.org/project/quantmod-python/">Empowering Quants</a></h2>
-									<p>Engineered Quantmod Python package to empower quantitative traders, researchers and data analysts.</p>
-									<ul class="actions">
-										<li><a href="quantmod/index.html" class="button">Syntax Symphony</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What I do</h2>
-							<p>Pioneering the integration of AI in finance through innovative Python labs, workshops, and bespoke workflow solutions for elite financial institutions. Elevating industry standards with cutting-edge seminars, immersive corporate training, and strategic advisory services in machine learning, LLMs, and advanced quantitative methods, empowering finance professionals to harness the full potential of AI-driven analytics and decision-making.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Python Lab</h3>
-									<p>Design, development, and delivery of comprehensive learning modules on Python for Quant Finance & ML.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Seminars</h3>
-									<p>Delivering impactful seminars and participating in panel discussions on the applications of ML and LLMs in finance.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Workshops</h3>
-									<p>Creating and leading specialized boot camps on Advanced ML, Ensemble Modeling, and LLM & GenAI.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3> Training</h3>
-									<p>Enhancing the skills of corporate delegates in Machine Learning and Neural Networks for Finance.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Workflow Solutions</h3>
-									<p>Pioneering Next-Gen Financial Solutions with Large Language Models and Generative AI for Finance.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Advisory</h3>
-									<p>Providing strategic insights to institutions on Data Science, ML, and the application of LLMs in Finance.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Memoir</a></li>
-								<li><a href="testimonials.html" class="button">Squad Speaks</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Say Hello.</h2>
-							<p>Reach out for advanced training and consulting services in Machine Learning and Generative AI.</p>
-							<div class="split style1">
-								<section>
-									<form action="/send-email" method="POST">
-									<!-- <form method="post" action="#"> -->
-										<!-- <div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="email" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div> -->
-										<!-- <ul class="actions">
-											<li><a href="mailto:kannansingaravelu@gmail.com" class="button">Send Email</a></li>
-										</ul> -->
-										<ul class="actions">
-											<li><a href="mailto:kannansingaravelu@gmail.com?subject=Inquiry%20from%20Website&body=Hello%2C%0A%0AI%20am%20contacting%20you%20regarding%20..." class="button">Send Email</a></li>
-										  </ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<!-- <h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span> -->
-										</li>
-										<li>
-											<!-- <h3>Email</h3>
-											<a href="#">user@untitled.tld</a> -->
-										</li>
-										<li>
-											<!-- <h3>Phone</h3>
-											<span>(000) 000-0000</span> -->
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://x.com/kannansi" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-												<li><a href="https://github.com/kannansingaravelu" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-												<li><a href="https://www.linkedin.com/in/kannansi" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
+				<p class="caption-row">OpenArrow &nbsp;·&nbsp; Bloomberg &nbsp;·&nbsp; quantmod &nbsp;·&nbsp; CQF &nbsp;·&nbsp; Markets &amp; Machines</p>
 			</div>
+		</section>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Kannan Singaravelu. All rights reserved.</li>
-						<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-					</ul>
+		<!-- OpenArrow — dark -->
+		<section class="tile tile-dark" id="openarrow">
+			<div class="tile-inner centered">
+				<span class="eyebrow">OpenArrow</span>
+				<h2 class="display">Structured products.<br />Agent-ready.</h2>
+				<p class="lead">An AI-native platform for pricing, risk analytics, and documentation — from an idea to an institutional-grade structure in under a minute.</p>
+				<div class="actions">
+					<a class="btn btn-primary" href="https://openarrow.ai" target="_blank" rel="noopener">Visit openarrow.ai</a>
+					<a class="btn btn-secondary" href="#contact">Talk structuring</a>
 				</div>
-			</footer>
+				<p class="caption-row" style="color:#cccccc">Deterministic pricing &nbsp;·&nbsp; Eight payoff families &nbsp;·&nbsp; Automated documentation</p>
+			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- About — parchment -->
+		<section class="tile tile-parchment" id="about">
+			<div class="tile-inner">
+				<span class="eyebrow">About</span>
+				<h2 class="display">Markets first.<br />Machines close behind.</h2>
+				<div class="split" style="margin-top:40px">
+					<div class="prose">
+						<p>Kannan works where quantitative finance, derivatives, and machine learning meet — with a career built across asset classes and a bias for application over theory.</p>
+						<p>At <strong>Bloomberg</strong>, he advised top-tier institutional clients on derivatives strategy and workflow automation, and was an early adopter of BQuant — pioneering data-driven solutions across the firm's quant research platforms.</p>
+						<p>As one of the most celebrated instructors on <strong>Fitch Learning's CQF program</strong>, he designed the Python Labs and machine learning modules that shaped a generation of quants — teaching so sought-after it was translated into Chinese. Ten specialised bootcamps in four years remains a program record.</p>
+						<p>Today he builds <strong>OpenArrow</strong> and writes <strong>Markets &amp; Machines</strong> — and advises institutions shaping what AI should mean for them.</p>
+					</div>
+					<div>
+						<ul class="fact-list">
+							<li><span class="k">Experience</span><span class="v">20+ years, financial markets</span></li>
+							<li><span class="k">Trained</span><span class="v">1000s of finance professionals, globally</span></li>
+							<li><span class="k">Now</span><span class="v">OpenArrow AI — Mumbai</span></li>
+							<li><span class="k">Credentials</span><span class="v">CQF · Applied Data Science, WQU</span></li>
+							<li><span class="k">Education</span><span class="v">MBA · B.E. Mechanical Engineering</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
 
-	</body>
+		<!-- quantmod — white -->
+		<section class="tile" id="quantmod">
+			<div class="tile-inner">
+				<div class="split">
+					<div>
+						<span class="eyebrow">Open source</span>
+						<h2 class="display">quantmod.<br />Quant finance, in Python.</h2>
+						<p class="lead">Financial time-series, options pricing, risk measures, and market data tooling — a lightweight library for quants, researchers, and analysts.</p>
+						<div class="actions">
+							<a class="btn btn-primary" href="https://docs.kannansingaravelu.com" target="_blank" rel="noopener">Documentation</a>
+							<a class="btn btn-secondary" href="https://pypi.org/project/quantmod/" target="_blank" rel="noopener">PyPI</a>
+						</div>
+					</div>
+					<div>
+						<div class="mono-panel" aria-hidden="true">
+							<span class="dim"># pip install quantmod</span><br /><br />
+							from quantmod.models import OptionInputs, BlackScholes<br /><br />
+							option = BlackScholes(<br />
+							&nbsp;&nbsp;OptionInputs(spot, strike, rate, ttm, vol)<br />
+							)<br />
+							<span class="dim"># price, greeks — done.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Speaking — dark 2 -->
+		<section class="tile tile-dark-2" id="speaking">
+			<div class="tile-inner centered">
+				<span class="eyebrow">Speaking</span>
+				<h2 class="display">The LSEG keynote.<br />Gen AI in the market data world.</h2>
+				<p class="lead">On how distributed AI will reshape market data and financial services — past the noise, into the real-world shifts. Delivered to data strategists and solution providers across the industry.</p>
+				<div class="actions">
+					<a class="btn btn-secondary" href="https://www.linkedin.com/posts/kannansi_unlocking-innovation-gen-ai-in-the-market-activity-7396362765415649280-BxjT" target="_blank" rel="noopener">See the event</a>
+				</div>
+				<p class="caption-row" style="color:#cccccc">One of many stages &nbsp;·&nbsp; panels and seminars on ML &amp; LLMs in finance &nbsp;·&nbsp; CQF lectures to a global cohort, translated into Chinese</p>
+			</div>
+		</section>
+
+		<!-- Services — parchment -->
+		<section class="tile tile-parchment" id="services">
+			<div class="tile-inner wide">
+				<div style="max-width:980px; margin:0 auto; text-align:center">
+					<span class="eyebrow">Services</span>
+					<h2 class="display">Ways of working.</h2>
+					<p class="lead" style="margin-left:auto; margin-right:auto">For institutions putting AI to work in markets — from the classroom to the boardroom to production.</p>
+				</div>
+				<div class="grid">
+					<article class="utility-card">
+						<h3>Advisory</h3>
+						<p>Strategic counsel on data science, machine learning, and the application of LLMs in finance — for teams deciding what AI should mean for their business.</p>
+					</article>
+					<article class="utility-card">
+						<h3>Workflow solutions</h3>
+						<p>Next-generation financial workflows built on large language models and generative AI — designed for production, not demos.</p>
+					</article>
+					<article class="utility-card">
+						<h3>Keynotes &amp; seminars</h3>
+						<p>Talks, panels, and executive briefings on AI in finance — tailored to the audience, from trading floor to board.</p>
+					</article>
+					<article class="utility-card">
+						<h3>Python Lab</h3>
+						<p>Comprehensive learning modules on Python for quantitative finance and machine learning — designed, developed, delivered.</p>
+					</article>
+					<article class="utility-card">
+						<h3>Workshops</h3>
+						<p>Specialised bootcamps on advanced ML, ensemble modeling, and LLMs &amp; GenAI — built for practitioners.</p>
+					</article>
+					<article class="utility-card">
+						<h3>Corporate training</h3>
+						<p>Machine learning and neural networks for finance — upskilling corporate teams with hands-on depth.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials — white -->
+		<section class="tile" id="words">
+			<div class="tile-inner centered">
+				<span class="eyebrow">In their words</span>
+				<figure>
+					<blockquote class="big-quote">&ldquo;The CQF without you would have so much less value&hellip; your teachings always point at applications instead of only theory.&rdquo;</blockquote>
+					<figcaption>Jose Blasco — Quantitative Strategist &amp; Multi-Asset Trader</figcaption>
+				</figure>
+				<div class="quote-grid">
+					<figure class="quote-card">
+						<p>&ldquo;Cufflinks was a really fun project to develop, and then life happened&hellip; glad to see what you have done here. Great work.&rdquo;</p>
+						<figcaption>Jorge Santos<span>Creator of Cufflinks &amp; Chief Product Officer</span></figcaption>
+					</figure>
+					<figure class="quote-card">
+						<p>&ldquo;I was a complete novice in programming — after following your guide I became proficient in Python, and published my own package to PyPI.&rdquo;</p>
+						<figcaption>Xuefei Jiang<span>Python developer</span></figcaption>
+					</figure>
+					<figure class="quote-card">
+						<p>&ldquo;Spent months trying to understand this through Coursera classes; none have come close to this.&rdquo;</p>
+						<figcaption>Session Mwamufiya<span>Founder &amp; Chief Executive Officer</span></figcaption>
+					</figure>
+					<figure class="quote-card">
+						<p>&ldquo;His teachings of data science and the Python labs, particularly on machine learning, were world class.&rdquo;</p>
+						<figcaption>Jarred Sullivan<span>Head of Global Multi-Asset Strategy</span></figcaption>
+					</figure>
+					<figure class="quote-card">
+						<p>&ldquo;Kannan is one of the pivotal faculty of the CQF program&hellip; he makes ML look very easy. His practical approach is really commendable.&rdquo;</p>
+						<figcaption>Anand Venkataraman<span>Vice President, Markets Finance &amp; Treasury</span></figcaption>
+					</figure>
+					<figure class="quote-card">
+						<p>&ldquo;It was a really valuable workshop full of real actionable information! It showed the value of a workshop given by a true hands on practitioner.&rdquo;</p>
+						<figcaption>Dr. Andy Green<span>Chief Technology Officer</span></figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- Writing — parchment -->
+		<section class="tile tile-parchment" id="writing">
+			<div class="tile-inner wide">
+				<div style="max-width:980px; margin:0 auto; text-align:center">
+					<span class="eyebrow">Writing &amp; resources</span>
+					<h2 class="display">Signal &gt; noise.</h2>
+				</div>
+				<div class="grid">
+					<article class="utility-card">
+						<p class="card-kicker">Newsletter</p>
+						<h3>Markets &amp; Machines</h3>
+						<p>Essays on markets, models, and machines — options, volatility, AI agents, and trading infrastructure.</p>
+						<div class="card-links"><a href="https://kannansi.substack.com" target="_blank" rel="noopener">Read on Substack</a></div>
+					</article>
+					<article class="utility-card">
+						<p class="card-kicker">Reference</p>
+						<h3>Docs &amp; guides</h3>
+						<p>Hands-on guides for data retrieval, option pricing, risk analysis, and time-series work in Python.</p>
+						<div class="card-links"><a href="https://docs.kannansingaravelu.com" target="_blank" rel="noopener">docs.kannansingaravelu.com</a></div>
+					</article>
+					<article class="utility-card">
+						<p class="card-kicker">Open source</p>
+						<h3>GitHub</h3>
+						<p>Curated Python resources for data science, ML, and quant finance — plus datasets from the labs and bootcamps.</p>
+						<div class="card-links"><a href="https://github.com/kannansingaravelu" target="_blank" rel="noopener">github.com/kannansingaravelu</a></div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact — dark 3 -->
+		<section class="tile tile-dark-3" id="contact">
+			<div class="tile-inner centered">
+				<span class="eyebrow">Contact</span>
+				<h2 class="display">Let's talk.</h2>
+				<p class="lead">Advisory, keynotes, and senior conversations about what AI should do for your firm.</p>
+				<div class="actions">
+					<a class="btn btn-primary" href="mailto:kannansingaravelu@gmail.com?subject=Inquiry%20from%20Website">Email Kannan</a>
+					<a class="btn btn-secondary" href="https://www.linkedin.com/in/kannansi" target="_blank" rel="noopener">LinkedIn</a>
+				</div>
+				<ul class="socials">
+					<li><a href="https://x.com/kannansi" target="_blank" rel="noopener" aria-label="X (Twitter)">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+					</a></li>
+					<li><a href="https://github.com/kannansingaravelu" target="_blank" rel="noopener" aria-label="GitHub">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.09 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12v3.15c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+					</a></li>
+					<li><a class="social-yt" href="https://www.youtube.com/kannansingaravelu" target="_blank" rel="noopener" aria-label="YouTube">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+					</a></li>
+					<li><a href="https://www.linkedin.com/in/kannansi" target="_blank" rel="noopener" aria-label="LinkedIn">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+					</a></li>
+					<li><a href="https://kannansi.substack.com" target="_blank" rel="noopener" aria-label="Substack — Markets &amp; Machines">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 8.13H1.46v2.83h21.08zM1.46 10.96V24L12 18.11 22.54 24V10.96zM22.54 0H1.46v2.83h21.08z"/></svg>
+					</a></li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="tile-inner">
+			<span>Copyright &copy; <span id="year">2026</span> Kannan Singaravelu. All rights reserved.</span>
+			<nav aria-label="Footer">
+				<a href="https://pypi.org/project/quantmod/" target="_blank" rel="noopener">quantmod</a>
+				<a href="https://docs.kannansingaravelu.com" target="_blank" rel="noopener">Docs</a>
+				<a href="https://kannansi.substack.com" target="_blank" rel="noopener">Newsletter</a>
+				<a href="https://openarrow.ai" target="_blank" rel="noopener">OpenArrow</a>
+			</nav>
+		</div>
+	</footer>
+
+	<script src="/assets/js/site.js" defer></script>
+</body>
 </html>

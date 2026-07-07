@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_hidden/
+
+Sitemap: https://kannansingaravelu.com/sitemap.xml
